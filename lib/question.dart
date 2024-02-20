@@ -12,59 +12,36 @@ class _QuestionState extends State<Question> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(
+      body: Center(
+        child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Center(
-                child: Text(
-                  'This is where question go',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25.0,
+          Text(
+             'Google was originally known as backrub',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+        color: Colors.white,
+          fontSize: 25.0,
+        ),
                   ),
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: FlatButton(
-                textColor: Colors.white,
-                color: Colors.green,
-                onPressed: () {},
-                child: Text(
-                  'True',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24.0,
+
+         TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green,
                   ),
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: FlatButton(
-                textColor: Colors.white,
-                color: Colors.red,
-                onPressed: () {},
-                child: Text(
-                  'False',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24.0,
-                  ),
-                ),
-              ),
-            ),
-          ),
+                  onPressed: (){},
+                  child: Text('True'),
+           ),
+         SizedBox(height: 40),
+         TextButton(
+                 style: TextButton.styleFrom(
+                   backgroundColor: Colors.red,
+           ),
+                   onPressed: (){},
+                   child: Text('False'),
+           ),
         ],
+      ),
       ),
     );
   }
